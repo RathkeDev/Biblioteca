@@ -25,12 +25,12 @@
         <div class="alert alert-danger" role="alert">
         <table > 
             <thead>
-                <tr><th>Id</th>
-                <th>Usuario</th>
-                <th>Data Empréstimo</th>
-                <th>Data Devolução</th>
-                <th>Livro</th>
-                <th>Autor</th>
+                <p><tr><th>Id</th></p>
+               <p><th>Usuario</th></p>
+                <p><th>Data Empréstimo</th></p>
+               <p><th>Data Devolução</th></p>
+                <p><th>Livro</th></p>
+                <p><th>Autor</th></p>
                 <th></th>
                 </tr>
             </thead>
@@ -38,13 +38,13 @@
                 @foreach(Emprestimo e in Model)
                 {
                 <tr>
-                    <td>@e.Id</td>
-                    <td>@e.NomeUsuario</td>
-                    <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
-                    <td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td>
-                    <td>@e.Livro.Titulo</td>
-                    <td>@e.Livro.Autor</td>
-                    <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
+                   <p><td>@e.Id</td></p>
+                   <p> <td>@e.NomeUsuario</td></p> 
+                    <p><td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td></p> 
+                   <p> <td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td></p> 
+                    <p><td>@e.Livro.Titulo</td></p> 
+                    <p><td>@e.Livro.Autor</td></p> 
+                   <p><td> <button type="button" class="btn btn-light"><a href="/Emprestimo/Edicao/@e.Id">Editar</a></button></td></p> 
                 </tr>
                 }
             </tbody>
